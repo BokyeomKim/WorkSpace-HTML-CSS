@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+
+      .container{   
+          background-color: rgb(0, 40, 73);
+          background-image: url(S_Day_img/section.jpeg);
+          background-position: center;
+          background-size: cover;
+          width: 100%;
+          height: 800px;
+          position: relative;
+      }
+
+      .header{
+          position: relative;
+          width: 100%;
+          height: 80px;
+          background-color: black;
+          background-size: cover;
+          background-position: center;
+      }
+        .logo{
+            cursor: pointer;
+            display: flex;
+        }
+        .logo img {
+            background-position: center;
+            background-size: cover;
+            width: 150px;
+            height: 80px;
+        }
+      
+
+
+      .nav{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+      }
+      .nav-links ul li{
+          list-style: none;
+          display: inline-block;
+          list-style: none;
+          padding: 15px 40px;
+          
+      }
+      .nav-links ul li a{
+          color: white;
+          font-size: 30px;
+          text-decoration: none;
+          font-weight: 600;
+      }
+
+      .nav-links ul li:hover{
+          background-color: red;
+          transition: 0.5s;
+          border-radius: 30px;
+      }
+     .item {
+        padding: 30px;
+        display: inline-block;
+        align-items: center;
+        justify-content: center;
+        
+     }
+
+     .item img {
+         width: 150px;
+         height: 130px;
+         animation-duration: 1.3s;
+        animation-name: slidein;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+
+     }
+
+
+     .item:hover{
+         transform: scale(2);
+         transition: 0.3s;
+     }
+     .section{
+         justify-content: space-between;
+         display: flex;
+         align-items: center;
+         padding: 50px 30px;
+     }
+
+     .section img{
+         width: 250px;
+         height: 250px;
+     }
+
+     .footer{
+        display: flex;
+        width: 100%;
+        height: 200px;
+        background-color: black;
+        display: flex;
+        position: absolute;
+        justify-content: center;
+        align-items: center;
+        
+     }
+
+    .card {
+        background-image: url(S_Day_img/star.jpeg);
+        border-radius: 8px;
+        display: inline-block;
+        cursor: pointer;
+        box-shadow: 10px black;
+        align-items: center;
+        width: 300px;
+        height: 400px;
+        overflow: hidden;
+        padding: 5px 5px;
+        background-color: black;
+    }
+    .card img{
+        width: 280px;
+        height: 280px;
+    }
+
+    
+    .card:hover{
+        transform: rotateY(720deg);
+        transition: 1.5s;
+    }
+        .text-wrap {
+        padding: 10px;
+        /*  제목 위치 */
+        text-align: left;
+      }
+      .text-wrap h1 {
+        font-size: 50px;
+        font-weight: 800;
+        color: white;
+      }
+      .text-wrap p {
+        /* 글씨 간격 (가로)조절 */
+        line-height: 2;
+        font-size: 12px;
+        text-align: center;
+        color: white;
+      }
+
+
+
+@keyframes slidein {
+    0%{
+    margin-left: 10%;
+    width: 100%
+  }
+
+ 
+
+ 
+  100% {
+    margin-right: 100%;
+    width: 100%;
+  }
+}
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+          <div class="nav">
+              <div class="logo">
+                  <img src="S_Day_img/logoimg.jpg" alt="">
+              </div>
+              <div class="nav-links">
+                  <ul>
+                      <li><a href="">HOME</a></li>
+                      <li><a href="">NEWS</a></li>
+                      <li><a href="">MAIL</a></li>
+                      <li><a href="">NOTE</a></li>
+                      <li><a href="">SETTING</a></li>
+                    </ul>
+              </div>
+          </div>
+      </div>
+      <div class="section">
+          <div class="card-wrap">
+
+              <div class="card">
+                  <img src="S_Day_img/books_apple_hires.jpg" alt="">
+                <div class="text-wrap">
+                    <h1>STUDY</h1>
+                    <p>공부</p>
+                </div>  
+            </div>
+            <div class="card">
+                <img src="S_Day_img/sleepcat.jpeg" alt="">
+                <div class="text-wrap">
+                    <h1>REST</h1>
+                    <p>휴식</p>
+                </div>
+            </div>
+           <div class="card">
+                <img src="S_Day_img/note_pad_pencil_hires.jpg" alt="">
+                <div class="text-wrap">
+                    <h1>MEMO</h1>
+                    <p>구상 중</p>
+                </div> 
+          </div>
+          <div class="card">
+            <img src="S_Day_img/pexels-photo-374876.jpeg" alt="">
+            <div class="text-wrap">
+                <h1>MUSIC</h1>
+                <p>공부할때 듣기 좋은 음악</p>
+            </div> 
+        </div>
+      </div>
+        </div>
+        </div>
+        <div class="footer">
+            <div class="item">  
+                <img src="S_Day_img/books_apple_hires.jpg" alt="">
+            </div>
+            <div class="item">
+                <img src="S_Day_img/sleepcat.jpeg" alt="">
+            </div>
+            <div class="item">
+                <img src="S_Day_img/note_pad_pencil_hires.jpg" alt="">
+            </div>  
+            <div class="item">
+                <img src="S_Day_img/pexels-photo-374876.jpeg" alt="">
+            </div>
+            <div class="item">
+                <img src="S_Day_img/section.jpeg" alt="">
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+  </body>
+</html>
