@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zoo</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .container{
+        background-image: url(back2.jpeg);
+        width: 100%;
+        height: auto;
+      }
+      .section {
+        display: grid;   
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-gap: 50px;
+        width: 80%;
+        height: auto;
+        margin: 30px auto 0;
+        background-image: url(back.jpeg);
+        padding: 10px;
+      }
+      .item {
+        width: 100%;
+        height: 350px;
+        background-color: forestgreen;
+        border: 2px solid black;
+        border-radius: 10px;
+          box-shadow: 0 2rem 1rem rgb(0, 0, 0);
+          text-align: center;
+          padding: 10px;
+          cursor: pointer;
+      }
+      .item img {
+        width: 100%;
+        height: 200px;
+        border-radius: 10px;
+        overflow: hidden;
+        object-fit: cover;
+      }
+      .item h1 {
+        text-align: center;
+        color: yellow;
+        margin: 10px;
+        font-weight: 900;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      }
+      .item p{
+        text-align: center;
+        color: yellow;
+        font-family: monospace;
+      }
+      .item:hover{
+          transform: rotateY(270deg);
+          transition: 0.3s;
+      }
+      .item a{
+          color: greenyellow;
+      }
+
+      
+      
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="section">
+        <div class="item">
+          <img src="bear.jpg" alt="" />
+          <h1>곰</h1>
+          <p></p>
+        </div>
+        <div class="item">
+          <img src="elephant.jpeg" alt="" />
+          <h1>코끼리</h1>
+          <p></p>
+        </div>
+        <div class="item">
+          <img src="giraffe.jpeg" alt="" />
+          <h1>기린</h1>
+          <p></p>
+        </div>
+        <div class="item">
+          <img src="lion.jpeg" alt="" />
+          <h1>사자</h1>
+          <p></p>
+        </div>
+        <div class="item">
+          <img src="redpanda.jpeg" alt="" />
+          <h1>레서판다</h1>
+          <p></p>
+        </div>
+             <div class="item">
+          <img src="tiger.jpeg" alt="" />
+          <h1>호랑이</h1>
+          <p></p>
+        </div>
+        <div class="item">
+          <img src="wolf.jpeg" alt="" />
+          <h1>늑대</h1>
+          <p></p>
+        </div>
+              <div class="item">
+          <img src="zebra.jpeg" alt="" />
+          <h1>얼룩말</h1>
+          <p></p>
+          <a href="#">클릭</a>
+  
+        </div>
+        <div class="item">
+          <img src="fennecfox.jpeg" alt="" />
+          <h1>사막여우</h1>
+          <p></p>
+          <a href="#">클릭</a>
+        </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
