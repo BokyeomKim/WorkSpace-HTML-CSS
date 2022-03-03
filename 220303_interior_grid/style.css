@@ -1,0 +1,126 @@
+:root {
+  --mainColor: orange;
+  --secondaryColor: #fff;
+  --borderColor: #c1c1c1;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.header {
+  display: flex;
+  width: 100%;
+  height: 150px;
+  background-color: black;
+}
+
+h3,
+h6 {
+  font-weight: 500;
+  font-family: 'Times New Roman', Times, serif;
+  color: var(--secondaryColor);
+}
+.section {
+  background: linear-gradient(137deg, #ffffff, #4e4c4c, #28282b, #000000);
+  background-position: center;
+  background-size: cover;
+  border-bottom: 1px solid var(--borderColor);
+  padding: 5%;
+}
+.project-container {
+  width: 1200px;
+  padding-bottom: 5%;
+  margin: auto;
+}
+.project-container h3 {
+  font-size: 70px;
+  text-align: center;
+  margin: 20px 0;
+}
+.post-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 350px);
+  gap: 20px;
+  cursor: pointer;
+}
+
+.post img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.post-review {
+  background-color: var(--secondaryColor);
+  padding: 5%;
+  margin: 5%;
+}
+.post-review h6 {
+  font-size: 16px;
+  font-weight: 400;
+  color: black;
+}
+.post-review p {
+  color: #4b5156;
+  font-size: 14px;
+  margin: 14px 0;
+}
+.post-review a {
+  text-decoration: none;
+  color: var(--mainColor);
+  padding: 5px;
+  margin-top: 5px;
+  border-radius: 10px;
+}
+.post-review a:hover {
+  background-color: yellow;
+  transition: 0.1s;
+}
+.post {
+  border: 1px solid var(--borderColor);
+  border-radius: 5px;
+  box-shadow: -2px 7px 12px rgba(145, 25, 25, 0.75);
+  background-color: black;
+}
+.post:hover {
+  transform: scale(1.3);
+  transition: 0.3s;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.nav-links ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 15px 100px;
+}
+.nav-links ul li a {
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 300;
+  color: white;
+  text-decoration: none;
+  font-size: 30px;
+  background-color: red;
+  padding: 10px;
+  border-radius: 20px;
+}
+.nav-links ul li a:hover {
+  transition: 0.3s;
+  background-color: green;
+}
+
+.logo {
+  margin-right: 100px;
+}
+.logo img {
+  width: 100%;
+  height: 150px;
+}
+
+.title h1 {
+  color: white;
+}
