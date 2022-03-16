@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>REDESIGN page</title>
+    <link rel="shortcut icon" href="S_Day_img/imgsrc/lucian_어질.gif" type="image/x-icon">
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+  />
+   <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        transition: 0.3s;
+      }
+
+      .header {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        background-color: black;
+      }
+      .swiper {
+  width: 1000px;
+  height: 600px;
+  cursor: pointer;
+}
+.swiper-slide img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+  .section{
+    padding-top: 5%;
+    width:100%;
+    height: auto;
+    background-image:  linear-gradient(
+            rgba(20, 20, 53, 0.8),
+            rgba(10, 30,20,0.3)
+          ),url(S_Day_img/imgsrc/wallpaper_28_1900.jpg);
+        background-size: cover;
+        background-position: center;
+  }
+
+      .logo {
+        display: flex;
+        margin: 3%;
+        cursor: pointer;
+      }
+
+      .logo img {
+        width: 138px;
+        height: 59px;
+      }
+      .title {
+        margin: 2%;
+        
+      }
+      .title h1 {
+        color: rgb(255, 255, 255);
+        font-size: 40px;
+        animation-name: change;
+        animation: change 0.1s linear infinite;
+        animation-duration: 4s;
+        
+      }
+      .dropdown {
+        flex-basis: 3%;
+        padding: 3%;
+      }
+      .dropdown button {
+        font-size: 25px;
+        font-weight: 600;
+        border: none;
+        text-align: center;
+        padding: 15px 20px;
+        background-color:black;
+        color: #99a4c6;
+      }
+      .dropdown button:hover {
+        color: yellow;
+      }
+
+      .dropdown-content {
+        position: absolute;
+        display: none;
+        width: 160px;
+        background-color: #2a3381;
+      }
+      .dropdown-content a {
+        display: block;
+        padding: 12px 16px;
+        text-decoration: none;
+        text-align: left;
+        color: #99a4c6;
+        font-size: 20px;
+        font-weight: 700;
+      }
+
+      .dropdown-content a:hover {
+        background-color: #ddd;
+      }
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+      .card-wrap{
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 20, 0.8)
+          ),url(S_Day_img/imgsrc/nenyaple.jpg);
+        background-size: cover;
+        background-position: center;
+        
+       padding:2% 10%;
+      }
+      .item {
+        padding: 30px;
+        display: inline-block;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .item img {
+        width: 150px;
+        height: 130px;
+        animation-duration: 1.3s;
+        animation-name: slidein;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+
+      .item:hover {
+        transform: scale(2);
+        transition: 0.3s;
+      }
+
+      .footer {
+        display: flex;
+        width: 100%;
+        background-color: black;
+        display: flex;
+        position: absolute;
+        justify-content: center;
+        align-items: center;
+      }
+      .book {
+        border-radius: 8px;
+        display: inline-block;
+        cursor: pointer;
+        box-shadow: 30px black;
+        align-items: center;
+        width: 350px;
+        height: 450px;
+        overflow: hidden;
+        padding: 1px 5px;
+        background-color: #ffffff;
+        margin: 20px;
+      }
+
+      .book img {
+        width: 100%;
+        height: 350px;
+      }
+
+      .book:hover {
+        transform: scale(1.2);
+        transition: 0.5s;
+        background-color: red;
+      }
+      
+      .book-info h1 {
+        font-size: 50px;
+        color: yellow;
+      }
+      .book-wrap{
+        padding: 5%;
+        width: 100%;
+        display: flex;
+        background-image: linear-gradient(
+            rgba(20, 20, 0, 0.8),
+            rgba(0, 31, 32, 0.8)
+          ),url(S_Day_img/imgsrc/wallpaper_17_1900.jpg);
+          background-position: center;
+          background-size: cover;
+      }
+      .card-wrap h1 {
+        color: yellow;
+        font-size: 50px;
+      }
+      
+
+      .card {
+        border-radius: 8px;
+        display: inline-block;
+        cursor: pointer;
+        box-shadow: 30px black;
+        align-items: center;
+        width: 350px;
+        height: 450px;
+        overflow: hidden;
+        padding: 1px 5px;
+        background-color: #ffffff;
+        margin: 20px;
+      }
+      .card img {
+        width: 100%;
+        height: 350px;
+      }
+
+      .card:hover {
+        transform: scale(1.2);
+        transition: 0.5s;
+        background-color: #a5a6fa;
+      }
+      .text-wrap {
+        /*  제목 위치 */
+        text-align: center;
+      }
+      .text-wrap h1 {
+        font-size: 20px;
+        font-weight: 800;
+        color: #666666;
+      }
+      .text-wrap h1:hover {
+        color: yellow;
+      }
+      .text-wrap p {
+        /* 글씨 간격 (가로)조절 */
+        line-height: 1.5;
+        font-size: 14px;
+        font-weight: 500;
+        text-align: center;
+        color: #cd76d6;
+      }
+      span {
+        /* in-line-block 명시 */
+        font-size:50px;
+        display: inline-block;
+        animation: waviy 1.5s infinite;
+        animation-delay: calc(0.1s * var(--i));
+      }
+      @keyframes waviy {
+        0%,
+        40%,
+        100% {
+          transform: translateY(0);
+        }
+        20% {
+          transform: translateY(-20px);
+        }
+      }
+      @keyframes change {
+    from {
+    color: rgb(255, 255, 255);
+  }
+  to {
+    color: rgb(0, 0, 0);
+  }
+  to {
+    color: rgb(192, 13, 13);
+  }
+  
+}
+      
+
+      .to-in{
+        width: 100%;
+        background-image: linear-gradient(
+            rgba(20, 20, 53, 0.8),
+            rgba(10, 30,20,0.3)
+          ), url(S_Day_img/imgsrc/wallpaper_22_1900/wallpaper_26_1900.jpg);
+        padding-top: 5%;
+        padding-right: 5%;
+        background-position: center;
+        background-size: cover;
+      }
+      .to-in h1{
+        text-align: right;
+        color: white;
+        font-size: 50px;
+      }
+      .to-in p{
+        margin-top: 2%;
+        text-align: right;
+        color: white;
+        font-size: 30px;
+      }
+  
+      .to-in img{
+        width: 1301px;
+    height: 1070px;
+      }
+      .to-in img {
+      animation-duration: 13s;
+      animation-name: slide-h;
+      animation-iteration-count: infinite;
+      }
+
+   
+      
+      
+
+@keyframes slide-h {
+  from {
+    margin-left: 100%;
+    width: 100%
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+
+      .footer{
+        cursor: pointer;
+      }
+
+      .footer h1 {
+        color: white;
+      }
+      @media (max-width: 800px){
+      .header {
+          flex-direction: column;
+        }
+      }
+      @media (max-width: 800px){
+      .section {
+          flex-direction: column;
+        }
+      }
+      
+      @media (max-width: 800px){
+      .container {
+          flex-direction: column;
+        }
+      }
+      @media (max-width: 800px){
+      .book-wrap {
+          flex-direction: column;
+        }
+      }
+      @media (max-width: 800px){
+      .card-wrap {
+          flex-direction: column;
+        }
+      }
+      @media (max-width: 800px) {
+        .footer {
+          flex-direction: column;
+        }
+      } @media (max-width: 800px) {
+        .swiper {
+          flex-direction: column;
+        }
+      }
+     
+      @keyframes slidein {
+    
+    0%{
+    margin-left: 10%;
+    width: 100%
+  }
+  100% {
+    margin-right: 100%;
+    width: 100%;
+  }
+}
+     
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="logo">
+          <img src="S_Day_img/imgsrc/logo.png" alt="" />
+        </div>
+        <div class="title">
+          <h1>
+            <span style="--i: 1">R</span>
+            <span style="--i: 2">E</span>
+            <span style="--i: 3">D</span>
+            <span style="--i: 4">I</span>
+            <span style="--i: 5">S</span>
+            <span style="--i: 6">I</span>
+            <span style="--i: 7">G</span>
+            <span style="--i: 8">N</span>
+            </h1>>
+            <h1>
+            <span style="--i: 9">P</span>
+            <span style="--i: 10">A</span>
+            <span style="--i: 11">G</span>
+            <span style="--i: 12">E</span>
+          </h1>
+        </div>
+        <div class="dropdown">
+          <button>NEWS</button>
+          <div class="dropdown-content">
+            <a href="#">공지사항</a>
+            <a href="#">업데이트</a>
+            <a href="#">이벤트</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button>INTRO</button>
+          <div class="dropdown-content">
+            <a href="#">개임소개</a>
+            <a href="#">가이드</a>
+            <a href="#">캐릭터</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button>COMMUNITY</button>
+          <div class="dropdown-content">
+            <a href="#">자유게시판</a>
+            <a href="#">공략게시판</a>
+            <a href="#">거래게시판</a>
+            <a href="#">랭킹</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button>ARCHIVE</button>
+          <div class="dropdown-content">
+            <a href="#">다운로드</a>
+            <a href="#">갤러리</a>
+            <a href="#">미디어</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button>SUPPORT</button>
+          <div class="dropdown-content">
+            <a href="#">고객지원</a>
+            <a href="#">운영정책</a>
+            <a href="#">마이페이지</a>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+            <img src="S_Day_img/imgsrc/머루.png" alt=""></div>
+            <div class="swiper-slide"><img src="S_Day_img/imgsrc/2p2.png" alt=""></div>
+            
+
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+          
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+        </div>
+      </div>
+              <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+              <script>
+                const swiper = new Swiper('.swiper', {
+                  // Optional parameters
+                  //   direction: 'vertical',
+                  autoplay : {
+                    delay :3300,
+                  },
+                  loop: true,
+                  // If we need pagination
+        pagination: {
+          el: '.swiper-pagination',
+        },
+      
+        // Navigation arrows
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        
+      });
+      
+      </script>         
+        </div>     
+        <div class="book-wrap">
+        <div class="book-info">
+          <h1>원작-룬의 아이들</h1>
+        </div>
+          <div class="book">
+            <img src="S_Day_img/imgsrc/winterer.jpg" alt="" />
+            <div class="text-wrap"> 
+              <h1>룬의 아이들 윈터러</h1>
+              <p></p>
+          </div>
+        </div>
+        <div class="book">
+          <img src="S_Day_img/imgsrc/데모닉.png" alt="" />
+          <div class="text-wrap">
+            <h1>룬의 아이들 데모닉</h1>
+            <p></p>
+          </div>
+        </div>
+        <div class="book">
+          <img src="S_Day_img/imgsrc/블러디드.jpg" alt="" />
+          <div class="text-wrap">
+            <h1>룬의 아이들 블러디드</h1>
+            <p></p>
+          </div>
+        </div>
+      </div>
+        <div class="card-wrap">
+          <h1>캐릭터</h1>
+          <div class="card">
+            <img src="S_Day_img/imgsrc/img_char_list_Lucian.png" alt="" />
+            <div class="text-wrap">
+              <h1>루시안 칼츠</h1>
+              <p>Lucian Kaltz</p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="S_Day_img/imgsrc/img_char_list_Boris.png" alt="" />
+            <div class="text-wrap">
+              <h1>보리스 진네만</h1>
+              <p>Boris Jineman</p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="S_Day_img/imgsrc/img_char_list_Maximin.png" alt="" />
+            <div class="text-wrap">
+              <h1>막시민 리프크네</h1>
+              <p>Maximin Liebkne</p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="S_Day_img/imgsrc/img_char_list_Sivelin.png" alt="" />
+            <div class="text-wrap">
+              <h1>시벨린 우</h1>
+              <p>Sivelin Uoo</p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="S_Day_img/imgsrc/img_char_list_Josua.png" alt="" />
+            <div class="text-wrap">
+              <h1>조슈아 폰 아르님</h1>
+              <p>Josua von Arnim</p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="S_Day_img/imgsrc/img_char_list_Lanziee.png" alt="" />
+            <div class="text-wrap">
+              <h1>란지에 로젠 크란츠</h1>
+              <p>Lanziee Rosen Kranz</p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="S_Day_img/imgsrc/img_char_list_Issac.png" alt="" />
+            <div class="text-wrap">
+              <h1>이자크 듀카스텔</h1>
+              <p>Issac Dukastel</p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="S_Day_img/imgsrc/img_char_list_Mila.png" alt="" />
+            <div class="text-wrap">
+              <h1>밀라 네브라스카</h1>
+              <p>Mila Nebraska</p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="S_Day_img/imgsrc/img_char_list_Tichiel.png" alt="" />
+            <div class="text-wrap">
+              <h1>티치엘 쥬스피앙</h1>
+              <p>Tichiel Juspian</p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="S_Day_img/imgsrc/img_char_list_Ispin.png" alt="" />
+            <div class="text-wrap">
+              <h1>이스핀 샤를</h1>
+              <p>Ispin Charles</p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="S_Day_img/imgsrc/img_char_list_Naya.png" alt="" />
+            <div class="text-wrap">
+              <h1>나야트레이</h1>
+              <p>Nayatrei</p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="S_Day_img/imgsrc/img_char_list_Anais.png" alt="" />
+            <div class="text-wrap">
+              <h1>아나이스 델 카릴 (아나벨)</h1>
+              <p>Anais del Caril</p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="S_Day_img/imgsrc/img_char_list_Cloe.png" alt="" />
+            <div class="text-wrap">
+              <h1>클로에 다 폰티나</h1>
+              <p>Cloe da Pontina</p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="S_Day_img/imgsrc/img_char_list_Benya.png" alt="" />
+            <div class="text-wrap">
+              <h1>벤야</h1>
+              <p>Benya</p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="S_Day_img/imgsrc/img_char_list_Isolet.png" alt="" />
+            <div class="text-wrap">
+              <h1>이솔렛</h1>
+              <p>Isolet</p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="S_Day_img/imgsrc/img_char_list_Roamini.png" alt="" />
+            <div class="text-wrap">
+              <h1>로아미니</h1>
+              <p>Roamini</p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="S_Day_img/imgsrc/img_char_list_Nocturne.png" alt="" />
+            <div class="text-wrap">
+              <h1>녹턴 드 뷔엥</h1>
+              <p>Nocturne de vien</p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="S_Day_img/imgsrc/img_char_list_Clarice.png" alt="" />
+            <div class="text-wrap">
+              <h1>클라리체 데 아브릴</h1>
+              <p>Clarice de Avril</p>
+            </div>
+          </div>
+        </div>
+       <div class="to-in">
+         <h1>테시스 Tecith
+          [지명, 행성]</h1>
+         <p>우주 어딘가에 존재하는 이차원(異次元) 은하계의 제 3 태양계에 위치한 3번째 행성.
+         </p>
+            <p>2개의 자연 위성 베이라스(Veilace, α)와 시에나(Sienna, β)를 위성으로 가지고 있으며 공전 주기는 365일, 자전 주기는 1일이다.</p>
+           <p>행성의 공전 주기가 태양을 초점으로 하는 타원형을 그리고 있어 태양과 행성의 거리에 따라 4계절의 기후 변화가 있으며, 패턴화 펄스(Patternize Pulse)라는 이름의</p> 
+            <p> 특유한 지자기(地磁氣)를 발산하고 있다.</p>
+         <p>행성 전체가 엷은 대기층으로 둘러싸여 있어 기본적으로 생명체가 서식할 수 있는 환경을 갖추고 있으며 북반구와 남반구에</p>
+         <p>총 4개의 대륙을 중심으로 크고 작은 군도가 산재해 있다.</p>
+         <img src="S_Day_img/imgsrc/boris.png" alt="">
+       </div>
+       
+        
+      </div>
+      </div>
+      <div class="footer">
+        <h1>ALBUM</h1>
+        <div class="item">
+          <img src="S_Day_img/imgsrc/album01.png" alt="" />
+        </div>
+        <div class="item">
+          <img src="S_Day_img/imgsrc/album02.png" alt="" />
+        </div>
+        <div class="item">
+          <img src="S_Day_img/imgsrc/album03.png" alt="" />
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
